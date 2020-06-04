@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Daily_Project]">
+  <test thread-count="5" name="DailyProject Test(failed)">
+    <parameter name="State_city" value="Odisha Adaba"/>
+    <classes>
+      <class name="com.daily.project.Validation">
+        <methods>
+          <include name="validateDropdown" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.daily.project.Validation -->
+    </classes>
+  </test> <!-- DailyProject Test(failed) -->
+</suite> <!-- Failed suite [Daily_Project] -->

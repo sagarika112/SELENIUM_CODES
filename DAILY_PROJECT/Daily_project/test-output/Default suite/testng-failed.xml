@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <parameter name="State_city" value="param-val-not-found"/>
+  <test thread-count="5" name="Default test(failed)">
+    <classes>
+      <class name="com.daily.project.Validation">
+        <methods>
+          <include name="validateDropdown" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.daily.project.Validation -->
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
