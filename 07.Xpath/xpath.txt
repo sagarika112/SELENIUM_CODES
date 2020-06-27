@@ -1,0 +1,86 @@
+
+
+Two  types of xpath:
+1.Absolute xpath
+2.Relative xpath
+Dynamic xpath element:
+.Tag
+Contains
+Stsrt with
+Chained xpath declaratiom
+Or
+And
+Text
+Ancestor
+Following
+Child
+Preceeding
+Following-sibling
+Descendent
+Parent
+Locator an element
+Absolute XPath
+•	It is a direct way to locate an element.
+•	It is very brittle.
+•	Starts with single slash “/” that means starting to search from the root.
+Relative XPath
+•	Starts from the middle of the HTML DOM.
+•	Starts with a double slash “//” that means it can start to search anywhere in the DOM structure.
+•	Shorter than Absolute XPath.
+•	Less fragile.
+1.id:
+
+
+
+Contains:
+Syntax: //tag[contains(@attribute, ‘value‘)]
+Example: //input[contains(@id, ‘er-messa’)]
+START-WITH
+Syntax: //tag[starts-with(@attribute, ‘value‘)]
+Example: //input[starts-with(@id, ‘user’)]
+
+
+
+Following:
+/coming down
+/..going up
+Exp: 
+		
+driver.findElement(By.xpath("//div[text()='Date of birth']//following::div/table/tbody/tr/td/select/option[text()='January']")).click();
+Following-Sibling:Forword Direction
+Preceeding-Sibling:Backword direction
+
+You have identify the first child and don’t have to choose the 2nd and 4th child  or there is nothing unique
+Then we can use child.
+Following and Preceeding sibling only work when the child is come under same parents.
+
+CHILD: https://www.actitime.com/
+//div[@class='header__container']/child::nav/child::ul/child::li[1]
+
+Following-Sibling:
+Forword Direction with same parent
+Examp: //a[text()='Features']//parent::*/following-sibling::li[2]
+
+Preceeding-sibling
+Backword direction with same parent
+//a[text()='Clients']//parent::*/preceding-sibling::li[2]
+
+NOTE:1:
+If for same xpath we are getting two elements then use below two method 
+1.store in a list and access by element 
+2.search for parent/grand parent  they must be
+
+
+
+Example:1:
+Jobs in https://www.naukri.com/mnjuser/homepage
+Solution 1: (//div[text()='Jobs'])[1]
+Solution 2: //a/div[text()='Jobs']
+Note 2:
+How to navigate from Requiter to Jobs
+//a/div[text()='Recruiters']/../../../li/a/span/following-sibling::div[text()='Jobs']
+Note 3:
+How to navigate Service to insights
+//div[text()='Services']/../../preceding-sibling::li/a/div[text()='Insights']
+	
+
