@@ -54,8 +54,8 @@ You have identify the first child and don’t have to choose the 2nd and 4th chi
 Then we can use child.
 Following and Preceeding sibling only work when the child is come under same parents.
 
-CHILD: https://www.actitime.com/
-//div[@class='header__container']/child::nav/child::ul/child::li[1]
+
+
 
 Following-Sibling:
 Forword Direction with same parent
@@ -73,6 +73,7 @@ If for same xpath we are getting two elements then use below two method
 
 
 Example:1:
+Example showing Following sibling USE 
 Jobs in https://www.naukri.com/mnjuser/homepage
 Solution 1: (//div[text()='Jobs'])[1]
 Solution 2: //a/div[text()='Jobs']
@@ -82,5 +83,22 @@ How to navigate from Requiter to Jobs
 Note 3:
 How to navigate Service to insights
 //div[text()='Services']/../../preceding-sibling::li/a/div[text()='Insights']
+
+
+Example:2
+How to use Child key word 
+Link to use 
+https://www.actitime.com/
+statement 1:
+//div[@class='header__container']/child::nav
+Statement 2:
+//div[@class='header__container']/nav
+Statement 1 and 2 have same meaning 
+
+DetailedExample:
+//div[@class='header__container']/child::nav/child::ul/child::li[1]
+
+
+
 	
 
